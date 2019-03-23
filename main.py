@@ -76,30 +76,28 @@ def pretty_print(task):
     print("Date: " + day + "/" + month + "/" + str(task['year']) + "\n" + "Task: " + task["task"] + "\n")
 
 
-def change_task():
+def change_task(json_data):
     """Change task.
 
     Function asks user input correct date and new task
     to this date while there are no task at the input date.
     Update json file with changed task.
     """
-    json_data = get_json('data.json')
     while True:
         date = get_correct_date()
         for task in json_data:
             if task['day'] == date["day"] and task['month'] == date['month'] and task['year'] == date['year']:
                 task['task'] = input("new task: ")
-                return update_json('data.json', json_data)
+                return json_data
         catch_error(True, "No any task in the date. Try input date again...")
 
 
-def print_task_from_date():
+def print_task_from_date(json_data):
     """Print tasks from input date.
 
     Function prints all tasks from the input date.
     If there are no any task it says about it.
     """
-    json_data = get_json('data.json')
     date = get_correct_date()
     is_not_task_at_data = True
     for task in json_data:
@@ -114,13 +112,12 @@ def is_date_from_period(_from, task, _to):
            and _from['year'] <= task['year'] <= _to['year']
 
 
-def print_task_from_period():
+def print_task_from_period(json_data):
     """Print all tasks from the period.
 
     Function prints all tasks at the input period.
     If there are no any task it says about it.
     """
-    json_data = get_json('data.json')
     print("Input from: ")
     _from = get_correct_date()
     print("Input to: ")
@@ -132,40 +129,75 @@ def print_task_from_period():
             pretty_print(task)
     catch_error(no_task_from_period, "No any task at the period")
 
-def add_task():
+
+def add_task(json_data):
     """ Add new task
 
     User input day,month,year and new task and
     function creates object and add this object
     to JSON file
     """
-    add_data = get_correct_data()
+    add_data = get_correct_date()
     add_data['task'] = input("Task: ")
-    json_data = get_json('data.json')
     json_data.append(add_data)
-    update_json('data.json', json_data)
+    return json_data
 
 
-def delete_task(day, month, year):
-    """ Remove task
+def delete_task(json_data):
+    """ Remove task6
 
     User input day,month,year and function
     deletes task from this date
     """
-    json_data = get_json('data.json')
     flag = True
+    date = get_correct_date()
     for task in json_data:
-        if task['day'] == day and task['month'] == month and task['year'] == year:
+        if task['day'] == date['day'] and task['month'] == date['month'] and task['year'] == date['year']:
             json_data.remove(task)
             flag = False
-            update_json('data.json', json_data)
     if flag:
         print("No such data")
 
 
-def print_all():
+def print_all(json_data):
     """ Print all tasks """
-    json_data = get_json('data.json')
     for task in json_data:
         pretty_print(task)
 
+
+def run_menu():
+    json_data=get_json('data.json')
+    while True:
+        show_menu()
+        key = get_correct_value("Select action: ")
+        if key == 1:
+            add_task(json_data)
+        elif key == 2:
+            delete_task(json_data)
+        elif key == 3:
+            change_task(json_data)
+        elif key == 4:
+            print_task_from_date(json_data)
+        elif key == 5:
+            print_task_from_period(json_data)
+        elif key == 6:
+            print_all(json_data)
+        elif key == 7:
+            update_json('data.json',json_data)
+            break
+        else:
+            print("Not correct choice.Try again...")
+        input("Press enter to continue: ")
+
+
+def show_menu():
+    print("1.Add task.")
+    print("2.Delete tasks.")
+    print("3.Change task.")
+    print("4.Show tasks from the date.")
+    print("5.Show tasks from the period")
+    print("6.Show all tasks.")
+    print("7.Exit.")
+
+
+run_menu()
