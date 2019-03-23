@@ -64,6 +64,7 @@ def catch_error(is_error_flag, error_message):
 
 
 def pretty_print(task):
+    """ Make beautiful form for print """
     if 0 < task['month'] < 10:
         month = "0" + str(task['month'])
     else:
@@ -130,3 +131,41 @@ def print_task_from_period():
             no_task_from_period = False
             pretty_print(task)
     catch_error(no_task_from_period, "No any task at the period")
+
+def add_task():
+    """ Add new task
+
+    User input day,month,year and new task and
+    function creates object and add this object
+    to JSON file
+    """
+    add_data = get_correct_data()
+    add_data['task'] = input("Task: ")
+    json_data = get_json('data.json')
+    json_data.append(add_data)
+    update_json('data.json', json_data)
+
+
+def delete_task(day, month, year):
+    """ Remove task
+
+    User input day,month,year and function
+    deletes task from this date
+    """
+    json_data = get_json('data.json')
+    flag = True
+    for task in json_data:
+        if task['day'] == day and task['month'] == month and task['year'] == year:
+            json_data.remove(task)
+            flag = False
+            update_json('data.json', json_data)
+    if flag:
+        print("No such data")
+
+
+def print_all():
+    """ Print all tasks """
+    json_data = get_json('data.json')
+    for task in json_data:
+        pretty_print(task)
+
