@@ -1,0 +1,82 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module backend</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>backend</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/dmitriy/flask_python/app/backend.py">/home/dmitriy/flask_python/app/backend.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="utils.html">utils</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-activate_user"><strong>activate_user</strong></a>(username)</dt><dd><tt>Function&nbsp;set&nbsp;active&nbsp;user&nbsp;to&nbsp;the&nbsp;existing&nbsp;user&nbsp;with&nbsp;username.<br>
+&nbsp;<br>
+If&nbsp;user&nbsp;doesn't&nbsp;exist&nbsp;-&nbsp;return&nbsp;false,&nbsp;if&nbsp;user<br>
+exist&nbsp;it&nbsp;sets&nbsp;fields&nbsp;of&nbsp;options.<br>
+Set&nbsp;active&nbsp;user&nbsp;to&nbsp;this&nbsp;user.</tt></dd></dl>
+ <dl><dt><a name="-add_task"><strong>add_task</strong></a>(date, new_task)</dt><dd><tt>Add&nbsp;new&nbsp;task<br>
+&nbsp;<br>
+User&nbsp;input&nbsp;day,month,year&nbsp;and&nbsp;new&nbsp;task&nbsp;and<br>
+function&nbsp;creates&nbsp;object&nbsp;and&nbsp;add&nbsp;this&nbsp;object<br>
+to&nbsp;JSON&nbsp;array.Returns&nbsp;created&nbsp;object.</tt></dd></dl>
+ <dl><dt><a name="-add_user"><strong>add_user</strong></a>(username)</dt><dd><tt>Function&nbsp;adds&nbsp;new&nbsp;user&nbsp;with&nbsp;username.<br>
+&nbsp;<br>
+If&nbsp;user&nbsp;exist&nbsp;-&nbsp;return&nbsp;false,&nbsp;if&nbsp;user&nbsp;doesn't<br>
+exist&nbsp;it&nbsp;creates&nbsp;json&nbsp;file&nbsp;with&nbsp;'username'.json&nbsp;name<br>
+and&nbsp;writes&nbsp;to&nbsp;it&nbsp;an&nbsp;empty&nbsp;array.<br>
+Sets&nbsp;active&nbsp;user&nbsp;to&nbsp;new&nbsp;user.</tt></dd></dl>
+ <dl><dt><a name="-change_task"><strong>change_task</strong></a>(task_id, new_task)</dt><dd><tt>Change&nbsp;task.<br>
+&nbsp;<br>
+Function&nbsp;changes&nbsp;task&nbsp;with&nbsp;the&nbsp;input&nbsp;id.<br>
+If&nbsp;there&nbsp;are&nbsp;no&nbsp;task&nbsp;with&nbsp;the&nbsp;input&nbsp;id<br>
+returns&nbsp;false,&nbsp;in&nbsp;successful&nbsp;case&nbsp;returns&nbsp;changed&nbsp;object.</tt></dd></dl>
+ <dl><dt><a name="-delete_task"><strong>delete_task</strong></a>(task_id)</dt><dd><tt>Remove&nbsp;task<br>
+&nbsp;<br>
+User&nbsp;input&nbsp;id&nbsp;and&nbsp;function<br>
+deletes&nbsp;task&nbsp;from&nbsp;this&nbsp;id.Returns&nbsp;task<br>
+if&nbsp;the&nbsp;was&nbsp;and&nbsp;empty&nbsp;object&nbsp;if&nbsp;was&nbsp;not.</tt></dd></dl>
+ <dl><dt><a name="-get_all_tasks"><strong>get_all_tasks</strong></a>()</dt><dd><tt>Function&nbsp;returns&nbsp;all&nbsp;task&nbsp;of&nbsp;the&nbsp;active&nbsp;user</tt></dd></dl>
+ <dl><dt><a name="-get_task_from_date"><strong>get_task_from_date</strong></a>(date)</dt><dd><tt>Returns&nbsp;tasks&nbsp;from&nbsp;input&nbsp;date.<br>
+&nbsp;<br>
+Function&nbsp;returns&nbsp;list&nbsp;of&nbsp;all&nbsp;tasks&nbsp;from&nbsp;the&nbsp;input&nbsp;date.<br>
+If&nbsp;there&nbsp;are&nbsp;no&nbsp;any&nbsp;task&nbsp;it&nbsp;returns&nbsp;empty&nbsp;list&nbsp;in&nbsp;other&nbsp;case<br>
+return&nbsp;list.</tt></dd></dl>
+ <dl><dt><a name="-get_task_from_period"><strong>get_task_from_period</strong></a>(_from, _to)</dt><dd><tt>Returns&nbsp;all&nbsp;tasks&nbsp;from&nbsp;the&nbsp;period.<br>
+&nbsp;<br>
+Function&nbsp;returns&nbsp;list&nbsp;of&nbsp;all&nbsp;tasks&nbsp;at&nbsp;the&nbsp;input&nbsp;period.<br>
+If&nbsp;there&nbsp;are&nbsp;no&nbsp;any&nbsp;task&nbsp;it&nbsp;returns&nbsp;empty&nbsp;array.</tt></dd></dl>
+ <dl><dt><a name="-get_task_with_id"><strong>get_task_with_id</strong></a>(task_id)</dt><dd><tt>Returns&nbsp;task&nbsp;with&nbsp;the&nbsp;input&nbsp;id.</tt></dd></dl>
+ <dl><dt><a name="-is_correct_date"><strong>is_correct_date</strong></a>(date)</dt><dd><tt>Checks&nbsp;if&nbsp;the&nbsp;date&nbsp;is&nbsp;correct.<br>
+&nbsp;<br>
+Function&nbsp;returns&nbsp;true&nbsp;if&nbsp;input&nbsp;date&nbsp;is&nbsp;correct<br>
+in&nbsp;other&nbsp;case&nbsp;it&nbsp;returns&nbsp;false.</tt></dd></dl>
+ <dl><dt><a name="-is_date_equal"><strong>is_date_equal</strong></a>(date1, date2)</dt><dd><tt>Returns&nbsp;true&nbsp;if&nbsp;dates&nbsp;are&nbsp;equal</tt></dd></dl>
+ <dl><dt><a name="-is_date_from_period"><strong>is_date_from_period</strong></a>(_from, task, _to)</dt><dd><tt>Returns&nbsp;true&nbsp;if&nbsp;_from&nbsp;&lt;=&nbsp;task&nbsp;&lt;=&nbsp;_to</tt></dd></dl>
+ <dl><dt><a name="-set_fields_options"><strong>set_fields_options</strong></a>(username)</dt><dd><tt>Set&nbsp;fields&nbsp;of&nbsp;options&nbsp;from&nbsp;input&nbsp;username.</tt></dd></dl>
+ <dl><dt><a name="-update_user_info"><strong>update_user_info</strong></a>()</dt><dd><tt>Function&nbsp;dump&nbsp;to&nbsp;file&nbsp;json_data&nbsp;of&nbsp;the&nbsp;active&nbsp;user</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>options</strong> = {}</td></tr></table>
+</body></html>

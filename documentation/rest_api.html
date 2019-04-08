@@ -1,0 +1,341 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module rest_api</title>
+<meta charset="utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>rest_api</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/dmitriy/flask_python/app/rest_api.py">/home/dmitriy/flask_python/app/rest_api.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="backend.html">backend</a><br>
+</td><td width="25%" valign=top><a href="flask_restful.reqparse.html">flask_restful.reqparse</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="flask_restful.html#Resource">flask_restful.Resource</a>(<a href="flask.views.html#MethodView">flask.views.MethodView</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="rest_api.html#TaskApi">TaskApi</a>
+</font></dt><dt><font face="helvetica, arial"><a href="rest_api.html#TaskListApi">TaskListApi</a>
+</font></dt><dt><font face="helvetica, arial"><a href="rest_api.html#TasksActions">TasksActions</a>
+</font></dt><dt><font face="helvetica, arial"><a href="rest_api.html#UserApi">UserApi</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="TaskApi">class <strong>TaskApi</strong></a>(<a href="flask_restful.html#Resource">flask_restful.Resource</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="rest_api.html#TaskApi">TaskApi</a></dd>
+<dd><a href="flask_restful.html#Resource">flask_restful.Resource</a></dd>
+<dd><a href="flask.views.html#MethodView">flask.views.MethodView</a></dd>
+<dd><a href="flask.views.html#View">flask.views.View</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="TaskApi-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Function&nbsp;for&nbsp;initialization&nbsp;args&nbsp;that&nbsp;will&nbsp;be&nbsp;parsed<br>
+in&nbsp;json&nbsp;data&nbsp;that&nbsp;is&nbsp;in&nbsp;the&nbsp;body&nbsp;of&nbsp;a&nbsp;request.</tt></dd></dl>
+
+<dl><dt><strong>mediatypes</strong> <em>lambda</em> resource_cls</dt></dl>
+
+<dl><dt><a name="TaskApi-put"><strong>put</strong></a>(self, task_id)</dt><dd><tt>Put&nbsp;request&nbsp;for&nbsp;change&nbsp;the&nbsp;task&nbsp;with&nbsp;the&nbsp;task_id.<br>
+&nbsp;<br>
+Returns&nbsp;empty&nbsp;object&nbsp;if&nbsp;there&nbsp;is&nbsp;no&nbsp;any&nbsp;task&nbsp;with&nbsp;the&nbsp;task_id,<br>
+and&nbsp;if&nbsp;it's&nbsp;returns&nbsp;changed&nbsp;object.</tt></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="TaskApi-delete"><strong>delete</strong></a>(task_id)</dt><dd><tt>Delete&nbsp;request&nbsp;for&nbsp;delete&nbsp;the&nbsp;task&nbsp;with&nbsp;the&nbsp;task_id.<br>
+&nbsp;<br>
+Returns&nbsp;empty&nbsp;object&nbsp;if&nbsp;there&nbsp;is&nbsp;no&nbsp;any&nbsp;task&nbsp;with&nbsp;the&nbsp;task_id,<br>
+and&nbsp;if&nbsp;it's&nbsp;returns&nbsp;deleted&nbsp;object.</tt></dd></dl>
+
+<dl><dt><a name="TaskApi-get"><strong>get</strong></a>(task_id)</dt><dd><tt>Get&nbsp;request&nbsp;for&nbsp;get&nbsp;task&nbsp;with&nbsp;the&nbsp;task_id.<br>
+&nbsp;<br>
+Returns&nbsp;empty&nbsp;object&nbsp;if&nbsp;there&nbsp;is&nbsp;no&nbsp;any&nbsp;task&nbsp;with&nbsp;the&nbsp;task_id,<br>
+and&nbsp;if&nbsp;it's&nbsp;returns&nbsp;object.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>endpoint</strong> = 'task'</dl>
+
+<dl><dt><strong>methods</strong> = set(['DELETE', 'GET', 'PUT'])</dl>
+
+<hr>
+Methods inherited from <a href="flask_restful.html#Resource">flask_restful.Resource</a>:<br>
+<dl><dt><a name="TaskApi-dispatch_request"><strong>dispatch_request</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="flask_restful.html#Resource">flask_restful.Resource</a>:<br>
+<dl><dt><strong>method_decorators</strong> = []</dl>
+
+<dl><dt><strong>representations</strong> = None</dl>
+
+<hr>
+Class methods inherited from <a href="flask.views.html#View">flask.views.View</a>:<br>
+<dl><dt><a name="TaskApi-as_view"><strong>as_view</strong></a>(cls, name, *class_args, **class_kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="flask.views.html#MethodViewType">flask.views.MethodViewType</a></font></font></dt><dd><tt>Converts&nbsp;the&nbsp;class&nbsp;into&nbsp;an&nbsp;actual&nbsp;view&nbsp;function&nbsp;that&nbsp;can&nbsp;be&nbsp;used<br>
+with&nbsp;the&nbsp;routing&nbsp;system.&nbsp;&nbsp;Internally&nbsp;this&nbsp;generates&nbsp;a&nbsp;function&nbsp;on&nbsp;the<br>
+fly&nbsp;which&nbsp;will&nbsp;instantiate&nbsp;the&nbsp;:class:`View`&nbsp;on&nbsp;each&nbsp;request&nbsp;and&nbsp;call<br>
+the&nbsp;:meth:`dispatch_request`&nbsp;method&nbsp;on&nbsp;it.<br>
+&nbsp;<br>
+The&nbsp;arguments&nbsp;passed&nbsp;to&nbsp;:meth:`as_view`&nbsp;are&nbsp;forwarded&nbsp;to&nbsp;the<br>
+constructor&nbsp;of&nbsp;the&nbsp;class.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="flask.views.html#View">flask.views.View</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="flask.views.html#View">flask.views.View</a>:<br>
+<dl><dt><strong>decorators</strong> = ()</dl>
+
+<dl><dt><strong>provide_automatic_options</strong> = None</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="TaskListApi">class <strong>TaskListApi</strong></a>(<a href="flask_restful.html#Resource">flask_restful.Resource</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="rest_api.html#TaskListApi">TaskListApi</a></dd>
+<dd><a href="flask_restful.html#Resource">flask_restful.Resource</a></dd>
+<dd><a href="flask.views.html#MethodView">flask.views.MethodView</a></dd>
+<dd><a href="flask.views.html#View">flask.views.View</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="TaskListApi-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Function&nbsp;for&nbsp;initialization&nbsp;args&nbsp;that&nbsp;will&nbsp;be&nbsp;parsed<br>
+in&nbsp;json&nbsp;data&nbsp;that&nbsp;is&nbsp;in&nbsp;the&nbsp;body&nbsp;of&nbsp;a&nbsp;request.</tt></dd></dl>
+
+<dl><dt><strong>mediatypes</strong> <em>lambda</em> resource_cls</dt></dl>
+
+<dl><dt><a name="TaskListApi-post"><strong>post</strong></a>(self)</dt><dd><tt>Post&nbsp;request&nbsp;to&nbsp;add&nbsp;a&nbsp;new&nbsp;task&nbsp;for&nbsp;the&nbsp;active&nbsp;user</tt></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="TaskListApi-get"><strong>get</strong></a>()</dt><dd><tt>Get&nbsp;request&nbsp;to&nbsp;get&nbsp;all&nbsp;tasks&nbsp;of&nbsp;the&nbsp;active&nbsp;user</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>endpoint</strong> = 'tasks'</dl>
+
+<dl><dt><strong>methods</strong> = set(['GET', 'POST'])</dl>
+
+<hr>
+Methods inherited from <a href="flask_restful.html#Resource">flask_restful.Resource</a>:<br>
+<dl><dt><a name="TaskListApi-dispatch_request"><strong>dispatch_request</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="flask_restful.html#Resource">flask_restful.Resource</a>:<br>
+<dl><dt><strong>method_decorators</strong> = []</dl>
+
+<dl><dt><strong>representations</strong> = None</dl>
+
+<hr>
+Class methods inherited from <a href="flask.views.html#View">flask.views.View</a>:<br>
+<dl><dt><a name="TaskListApi-as_view"><strong>as_view</strong></a>(cls, name, *class_args, **class_kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="flask.views.html#MethodViewType">flask.views.MethodViewType</a></font></font></dt><dd><tt>Converts&nbsp;the&nbsp;class&nbsp;into&nbsp;an&nbsp;actual&nbsp;view&nbsp;function&nbsp;that&nbsp;can&nbsp;be&nbsp;used<br>
+with&nbsp;the&nbsp;routing&nbsp;system.&nbsp;&nbsp;Internally&nbsp;this&nbsp;generates&nbsp;a&nbsp;function&nbsp;on&nbsp;the<br>
+fly&nbsp;which&nbsp;will&nbsp;instantiate&nbsp;the&nbsp;:class:`View`&nbsp;on&nbsp;each&nbsp;request&nbsp;and&nbsp;call<br>
+the&nbsp;:meth:`dispatch_request`&nbsp;method&nbsp;on&nbsp;it.<br>
+&nbsp;<br>
+The&nbsp;arguments&nbsp;passed&nbsp;to&nbsp;:meth:`as_view`&nbsp;are&nbsp;forwarded&nbsp;to&nbsp;the<br>
+constructor&nbsp;of&nbsp;the&nbsp;class.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="flask.views.html#View">flask.views.View</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="flask.views.html#View">flask.views.View</a>:<br>
+<dl><dt><strong>decorators</strong> = ()</dl>
+
+<dl><dt><strong>provide_automatic_options</strong> = None</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="TasksActions">class <strong>TasksActions</strong></a>(<a href="flask_restful.html#Resource">flask_restful.Resource</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="rest_api.html#TasksActions">TasksActions</a></dd>
+<dd><a href="flask_restful.html#Resource">flask_restful.Resource</a></dd>
+<dd><a href="flask.views.html#MethodView">flask.views.MethodView</a></dd>
+<dd><a href="flask.views.html#View">flask.views.View</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="TasksActions-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Function&nbsp;for&nbsp;initialization&nbsp;args&nbsp;that&nbsp;will&nbsp;be&nbsp;parsed<br>
+in&nbsp;json&nbsp;data&nbsp;that&nbsp;is&nbsp;in&nbsp;the&nbsp;body&nbsp;of&nbsp;a&nbsp;request.</tt></dd></dl>
+
+<dl><dt><a name="TasksActions-get"><strong>get</strong></a>(self)</dt><dd><tt>Get&nbsp;request&nbsp;to&nbsp;get&nbsp;all&nbsp;tasks&nbsp;from&nbsp;the&nbsp;date.<br>
+&nbsp;<br>
+Day,month,year&nbsp;are&nbsp;the&nbsp;parameters&nbsp;of&nbsp;the&nbsp;url.<br>
+If&nbsp;there&nbsp;are&nbsp;no&nbsp;any&nbsp;task&nbsp;at&nbsp;the&nbsp;date&nbsp;return&nbsp;empty&nbsp;list,<br>
+in&nbsp;other&nbsp;case&nbsp;returns&nbsp;list&nbsp;with&nbsp;the&nbsp;task&nbsp;objects.</tt></dd></dl>
+
+<dl><dt><strong>mediatypes</strong> <em>lambda</em> resource_cls</dt></dl>
+
+<dl><dt><a name="TasksActions-post"><strong>post</strong></a>(self)</dt><dd><tt>Post&nbsp;request&nbsp;to&nbsp;get&nbsp;all&nbsp;tasks&nbsp;from&nbsp;the&nbsp;period.<br>
+&nbsp;<br>
+From&nbsp;and&nbsp;to&nbsp;are&nbsp;in&nbsp;the&nbsp;json&nbsp;data&nbsp;of&nbsp;the&nbsp;request.<br>
+If&nbsp;there&nbsp;are&nbsp;no&nbsp;any&nbsp;task&nbsp;at&nbsp;the&nbsp;period&nbsp;return&nbsp;empty&nbsp;list,<br>
+in&nbsp;other&nbsp;case&nbsp;returns&nbsp;list&nbsp;with&nbsp;the&nbsp;task&nbsp;objects.</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>endpoint</strong> = 'actions'</dl>
+
+<dl><dt><strong>methods</strong> = set(['GET', 'POST'])</dl>
+
+<hr>
+Methods inherited from <a href="flask_restful.html#Resource">flask_restful.Resource</a>:<br>
+<dl><dt><a name="TasksActions-dispatch_request"><strong>dispatch_request</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="flask_restful.html#Resource">flask_restful.Resource</a>:<br>
+<dl><dt><strong>method_decorators</strong> = []</dl>
+
+<dl><dt><strong>representations</strong> = None</dl>
+
+<hr>
+Class methods inherited from <a href="flask.views.html#View">flask.views.View</a>:<br>
+<dl><dt><a name="TasksActions-as_view"><strong>as_view</strong></a>(cls, name, *class_args, **class_kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="flask.views.html#MethodViewType">flask.views.MethodViewType</a></font></font></dt><dd><tt>Converts&nbsp;the&nbsp;class&nbsp;into&nbsp;an&nbsp;actual&nbsp;view&nbsp;function&nbsp;that&nbsp;can&nbsp;be&nbsp;used<br>
+with&nbsp;the&nbsp;routing&nbsp;system.&nbsp;&nbsp;Internally&nbsp;this&nbsp;generates&nbsp;a&nbsp;function&nbsp;on&nbsp;the<br>
+fly&nbsp;which&nbsp;will&nbsp;instantiate&nbsp;the&nbsp;:class:`View`&nbsp;on&nbsp;each&nbsp;request&nbsp;and&nbsp;call<br>
+the&nbsp;:meth:`dispatch_request`&nbsp;method&nbsp;on&nbsp;it.<br>
+&nbsp;<br>
+The&nbsp;arguments&nbsp;passed&nbsp;to&nbsp;:meth:`as_view`&nbsp;are&nbsp;forwarded&nbsp;to&nbsp;the<br>
+constructor&nbsp;of&nbsp;the&nbsp;class.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="flask.views.html#View">flask.views.View</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="flask.views.html#View">flask.views.View</a>:<br>
+<dl><dt><strong>decorators</strong> = ()</dl>
+
+<dl><dt><strong>provide_automatic_options</strong> = None</dl>
+
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="UserApi">class <strong>UserApi</strong></a>(<a href="flask_restful.html#Resource">flask_restful.Resource</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="rest_api.html#UserApi">UserApi</a></dd>
+<dd><a href="flask_restful.html#Resource">flask_restful.Resource</a></dd>
+<dd><a href="flask.views.html#MethodView">flask.views.MethodView</a></dd>
+<dd><a href="flask.views.html#View">flask.views.View</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="UserApi-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>Function&nbsp;for&nbsp;initialization&nbsp;args&nbsp;that&nbsp;will&nbsp;be&nbsp;parsed<br>
+in&nbsp;json&nbsp;data&nbsp;that&nbsp;is&nbsp;in&nbsp;the&nbsp;body&nbsp;of&nbsp;a&nbsp;request.</tt></dd></dl>
+
+<dl><dt><strong>mediatypes</strong> <em>lambda</em> resource_cls</dt></dl>
+
+<dl><dt><a name="UserApi-post"><strong>post</strong></a>(self)</dt><dd><tt>Post&nbsp;request&nbsp;for&nbsp;adding&nbsp;a&nbsp;new&nbsp;user.<br>
+Returns&nbsp;code&nbsp;-&nbsp;201&nbsp;if&nbsp;user&nbsp;has&nbsp;been&nbsp;successful&nbsp;added,<br>
+code&nbsp;-&nbsp;400&nbsp;if&nbsp;user&nbsp;hasn't&nbsp;been&nbsp;successful&nbsp;added</tt></dd></dl>
+
+<dl><dt><a name="UserApi-put"><strong>put</strong></a>(self)</dt><dd><tt>Put&nbsp;request&nbsp;for&nbsp;changing&nbsp;active&nbsp;user.<br>
+Returns&nbsp;code&nbsp;-&nbsp;200&nbsp;if&nbsp;user&nbsp;has&nbsp;been&nbsp;successful&nbsp;changed,<br>
+code&nbsp;-&nbsp;400&nbsp;if&nbsp;user&nbsp;hasn't&nbsp;been&nbsp;successful&nbsp;changed.</tt></dd></dl>
+
+<hr>
+Static methods defined here:<br>
+<dl><dt><a name="UserApi-get"><strong>get</strong></a>()</dt><dd><tt>Get&nbsp;request&nbsp;for&nbsp;get&nbsp;name&nbsp;of&nbsp;the&nbsp;current&nbsp;active&nbsp;user</tt></dd></dl>
+
+<hr>
+Data and other attributes defined here:<br>
+<dl><dt><strong>endpoint</strong> = 'user'</dl>
+
+<dl><dt><strong>methods</strong> = set(['GET', 'POST', 'PUT'])</dl>
+
+<hr>
+Methods inherited from <a href="flask_restful.html#Resource">flask_restful.Resource</a>:<br>
+<dl><dt><a name="UserApi-dispatch_request"><strong>dispatch_request</strong></a>(self, *args, **kwargs)</dt></dl>
+
+<hr>
+Data and other attributes inherited from <a href="flask_restful.html#Resource">flask_restful.Resource</a>:<br>
+<dl><dt><strong>method_decorators</strong> = []</dl>
+
+<dl><dt><strong>representations</strong> = None</dl>
+
+<hr>
+Class methods inherited from <a href="flask.views.html#View">flask.views.View</a>:<br>
+<dl><dt><a name="UserApi-as_view"><strong>as_view</strong></a>(cls, name, *class_args, **class_kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="flask.views.html#MethodViewType">flask.views.MethodViewType</a></font></font></dt><dd><tt>Converts&nbsp;the&nbsp;class&nbsp;into&nbsp;an&nbsp;actual&nbsp;view&nbsp;function&nbsp;that&nbsp;can&nbsp;be&nbsp;used<br>
+with&nbsp;the&nbsp;routing&nbsp;system.&nbsp;&nbsp;Internally&nbsp;this&nbsp;generates&nbsp;a&nbsp;function&nbsp;on&nbsp;the<br>
+fly&nbsp;which&nbsp;will&nbsp;instantiate&nbsp;the&nbsp;:class:`View`&nbsp;on&nbsp;each&nbsp;request&nbsp;and&nbsp;call<br>
+the&nbsp;:meth:`dispatch_request`&nbsp;method&nbsp;on&nbsp;it.<br>
+&nbsp;<br>
+The&nbsp;arguments&nbsp;passed&nbsp;to&nbsp;:meth:`as_view`&nbsp;are&nbsp;forwarded&nbsp;to&nbsp;the<br>
+constructor&nbsp;of&nbsp;the&nbsp;class.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="flask.views.html#View">flask.views.View</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Data and other attributes inherited from <a href="flask.views.html#View">flask.views.View</a>:<br>
+<dl><dt><strong>decorators</strong> = ()</dl>
+
+<dl><dt><strong>provide_automatic_options</strong> = None</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>api</strong> = &lt;flask_restful.Api object&gt;<br>
+<strong>app</strong> = &lt;Flask 'rest_api'&gt;</td></tr></table>
+</body></html>
